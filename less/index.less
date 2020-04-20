@@ -24,12 +24,14 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	
 	line-height: 1;
 }
 ol, ul {
@@ -56,4 +58,84 @@ table {
 html, body {
     height: 100%;
 }
+// my code below 
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@main-font:1.6rem;
+@cool-border: 3px inset red;
+@grey-border:2px solid grey;
+@h1-fontstyle:'Girassol', cursive;
+.space-around(){
+	display:flex;
+	justify-content:space-around;
+}
+.centre(){
+	display:flex;
+	justify-content:center;
+	align-items:center;
+  }
+.padding(){
+	margin:2%;
+	padding: 4% 4%;
+}
+  h1{
+	font-weight: bold;
+	padding-bottom:4%;
+	font-family: @h1-fontstyle;
+}//end of h1
+nav{
+	font-size: @main-font;
+	.space-around();
+	width:100%;
+border-bottom: 1px solid black;
+  margin: 20px 0;
+  padding: 20px 0;
+	a{
+	text-decoration: none;
+	}//end a
+}//end nav
+.top-content{
+font-size: @main-font;
+.intro{
+background-color:lightblue;
+.padding();
+.centre();
+@media (max-width:500px){
+	flex-direction:column;
+	padding:8% 8%;
+}
+.text{
+flex-direction: column;
+}//end of .text
+}//end of .intro
+} //end of .main-content
+.middle-content{
+	font-size:@main-font;
+.space-around();
+.padding();
+border:@cool-border;
+@media(max-width:500px){
+	flex-direction:column;
+	.skills{
+		padding-bottom:10%;
+	}//end .skills
+}//end media query
+.work-history{
+	h1{
+		border:@grey-border
+	}//end h1
+	p{
+		border:@grey-border;
+	}//end p
+}//end .work-history
+}//end of .middle-content
+.bottom-content{
+	font-size: @main-font;
+.centre();
+.padding();
+margin:0 20%;
+border:40px ridge skyblue;
+@media (max-width:800px) {
+border: 20px  ridge skyblue;
 
+}
+}//end .bottom-content
